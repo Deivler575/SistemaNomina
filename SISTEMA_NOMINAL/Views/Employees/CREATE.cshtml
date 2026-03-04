@@ -7,27 +7,27 @@
 
 <form asp-action="Create" method="post">
     <div>
-        <label asp-for="CI"></label>
+        <label asp-for="CI">Cedula de Identidad</label>
         <input asp-for="CI" />
         <span asp-validation-for="CI"></span>
     </div>
     <div>
-        <label asp-for="BirthDate"></label>
+        <label asp-for="BirthDate">Fecha de Nacimiento</label>
         <input asp-for="BirthDate" type="date" />
         <span asp-validation-for="BirthDate"></span>
     </div>
     <div>
-        <label asp-for="FirstName"></label>
+        <label asp-for="FirstName">Nombre</label>
         <input asp-for="FirstName" />
         <span asp-validation-for="FirstName"></span>
     </div>
     <div>
-        <label asp-for="LastName"></label>
+        <label asp-for="LastName">Apellido</label>
         <input asp-for="LastName" />
         <span asp-validation-for="LastName"></span>
     </div>
     <div>
-        <label asp-for="Gender"></label>
+        <label asp-for="Gender">Genero</label>
         <select asp-for="Gender">
             <option value="M">Masculino</option>
             <option value="F">Femenino</option>
@@ -35,7 +35,7 @@
         <span asp-validation-for="Gender"></span>
     </div>
     <div>
-        <label asp-for="HireDate"></label>
+        <label asp-for="HireDate">Fecha de Contratacion</label>
         <input asp-for="HireDate" type="date" />
         <span asp-validation-for="HireDate"></span>
     </div>

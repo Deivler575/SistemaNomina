@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model IEnumerable<SistemaNomina.Models.Employee>
+
+<h1>Lista de Empleados</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>CI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Género</th>
+            <th>Fecha de Contratación</th>
+            <th>Correo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.CI</td>
+                <td>@employee.FirstName</td>
+                <td>@employee.LastName</td>
+                <td>@employee.Gender</td>
+                <td>@employee.HireDate.ToShortDateString()</td>
+                <td>@employee.Correo</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Employees" asp-action="Create">Agregar Empleado</a>

@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model IEnumerable<SistemaNomina.Models.Salary>
+
+<h1>Lista de Salarios</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Empleado No</th>
+            <th>Salario</th>
+            <th>Desde</th>
+            <th>Hasta</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var salary in Model)
+        {
+            <tr>
+                <td>@salary.EmpNo</td>
+                <td>@salary.SalaryAmount</td>
+                <td>@salary.FromDate.ToShortDateString()</td>
+                <td>@(salary.ToDate.HasValue? salary.ToDate.Value.ToShortDateString() : "Actual")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Salaries" asp-action="Create">Agregar Salario</a>
